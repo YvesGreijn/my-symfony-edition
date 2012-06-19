@@ -1,0 +1,22 @@
+# IDE files
+.idea
+
+#Composer file
+composer.phar
+
+# Bootstrap
+app/bootstrap.php.cache
+
+# Symfony directories
+web/bundles/
+app/bootstrap.php.cache
+app/cache/*
+app/logs/*
+build/
+vendor
+
+# Configuration files
+app/config/parameters.yml
+
+# BDD files
+app/propel/sql/*
