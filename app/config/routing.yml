@@ -1,7 +1,7 @@
-# Internal routing configuration to handle ESI
-#_internal:
-#    resource: "@FrameworkBundle/Resources/config/routing/internal.xml"
-#    prefix:   /_internal
+DeuteronProjectBundle:
+    resource: "@DeuteronProjectBundle/Controller/"
+    type:     annotation
+    prefix:   /
 
 fos_user_security:
     resource: "@FOSUserBundle/Resources/config/routing/security.xml"

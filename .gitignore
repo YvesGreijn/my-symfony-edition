@@ -8,6 +8,7 @@ composer.phar
 app/bootstrap.php.cache
 
 # Symfony directories
+web/.htaccess
 web/bundles/
 app/bootstrap.php.cache
 app/cache/*

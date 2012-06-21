@@ -1,6 +1,6 @@
 {
-    "name": "MeccanoManager",
-    "description": "An application to manage all your Meccano stuff",
+    "name": "My Symfony Edition",
+    "description": "A Symfony Edition that fits all my needs",
     "autoload": {
         "psr-0": { "": "src/" }
     },
