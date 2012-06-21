@@ -20,10 +20,10 @@ class AppKernel extends Kernel
             new FOS\UserBundle\FOSUserBundle(),
             new Propel\PropelBundle\PropelBundle(),
             new Knp\Bundle\MenuBundle\KnpMenuBundle(),
-            new Admingenerator\GeneratorBundle\AdmingeneratorGeneratorBundle(),
-            new Admingenerator\UserBundle\AdmingeneratorUserBundle(),
-            new WhiteOctober\PagerfantaBundle\WhiteOctoberPagerfantaBundle(),
             new Deuteron\Bundle\ProjectBundle\DeuteronProjectBundle(),
+            new Deuteron\Bundle\UserBundle\DeuteronUserBundle(),
+            new Deuteron\Bundle\PaginationBundle\DeuteronPaginationBundle(),
+            new Deuteron\Bundle\PageBundle\DeuteronPageBundle(),
         );
 
         if (in_array($this->getEnvironment(), array('dev', 'test'))) {

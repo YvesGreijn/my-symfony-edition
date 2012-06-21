@@ -20,8 +20,6 @@
         "propel/propel1":                                   "1.6.5",
         "phing/phing":                                      "2.4.12",
         "friendsofsymfony/user-bundle":                     "dev-master",
-        "cedriclombardot/admingenerator-generator-bundle":  "dev-master",
-        "cedriclombardot/admingenerator-user-bundle":       "dev-master",
         "knplabs/knp-paginator-bundle":                     "dev-master",
         "knplabs/knp-menu-bundle":                          "dev-master",
         "propel/propel-bundle":                             "1.1.*",

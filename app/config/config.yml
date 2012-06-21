@@ -64,12 +64,3 @@ fos_user:
 
 knp_menu:
     twig: true
-
-admingenerator_generator:
-    base_admin_template:  AdmingeneratorGeneratorBundle::base_admin_assetic_less.html.twig
-    use_propel:           true
-    use_doctrine_orm:     false
-    use_doctrine_odm:     false
-
-admingenerator_user:
-    login_template: DeuteronProjectBundle::layout.html.twig

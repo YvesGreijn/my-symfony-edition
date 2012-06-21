@@ -1,0 +1,11 @@
+{% extends '::base.html.twig' %}
+
+{% block title %}Deuteron - Administration{% endblock %}
+
+{% block content %}
+<h1>Administration</h1>
+
+{% for link in links %}
+  <a href="{{ path(link.url) }}" title="{{ link.label }}">{{ link.label }}</a>
+{% endfor %}
+{% endblock %}

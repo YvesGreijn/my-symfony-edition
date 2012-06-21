@@ -29,7 +29,10 @@
 
                 {% if is_granted('IS_AUTHENTICATED_FULLY') %}
                 <p class="pull-right">
-                    <a href="{{ path('fos_user_profile_show') }}" title="Voir son profil">{{ app.user.username }}</a> <a href="{{ path('fos_user_security_logout') }}" title="Déconnexion">Déconnexion</a>
+                    <a href="{{ path('fos_user_profile_show') }}" title="Voir son profil">{{ app.user.username }}</a>
+                    <a href="{{ path('fos_user_security_logout') }}">
+                        {{ 'layout.logout'|trans({}, 'FOSUserBundle') }}
+                    </a>
                 </p>
                 {% else %}
                 <p class="pull-right">
@@ -38,6 +41,7 @@
                 {% endif %}
             </div>
         </div>
+
         </header>
         <!--
         ======================= Topbar ===========================
@@ -57,9 +61,6 @@
         ======================= Container ===========================
         -->
 
-        <script src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
-        <script src="{{ asset('bundles/deuteronproject/js/vendor/bootstrap-dropdown.js') }}"></script>
-        <script src="{{ asset('bundles/deuteronproject/js/utils/dropdown.js') }}"></script>
         {% block javascripts %}{% endblock %}
 
     </body>

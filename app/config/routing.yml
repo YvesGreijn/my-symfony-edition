@@ -1,7 +1,12 @@
-DeuteronProjectBundle:
-    resource: "@DeuteronProjectBundle/Controller/"
+DeuteronPageBundle:
+    resource: "@DeuteronPageBundle/Controller/"
     type:     annotation
     prefix:   /
+
+DeuteronUserBundle:
+    resource: "@DeuteronUserBundle/Controller/"
+    type:     annotation
+    prefix:   /admin/user
 
 fos_user_security:
     resource: "@FOSUserBundle/Resources/config/routing/security.xml"

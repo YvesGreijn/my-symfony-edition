@@ -1,0 +1,178 @@
+
+{% extends "AdmingeneratorGeneratorBundle::base_admin_assetic_less.html.twig" %}
+
+{% block stylesheets %}    {{ parent() }}
+    {% endblock %}
+
+{% block javascripts %}    {{ parent() }}
+    {% endblock %}    {% block title %}
+        {{ parent() }} - List for Bundle\UserBundle
+    {% endblock %}
+{% block body %}    {% block page_title %}
+        <head>
+            <h1>List for Bundle\UserBundle</h1>
+        </head>
+    {% endblock %}
+<div class="admin_list main_content">
+
+        {% block list_scopes %}
+{% endblock %}
+{% block list_nbresults %}
+<div class="list_nbresults">
+    {% set count = Users.nbResults %}
+    {% set start = ( Users.currentPage - 1 ) * Users.maxPerPage + 1 %}
+    {% set end = start + Users.maxPerPage - 1 %}
+    {% set end = end > count ? count : end %}
+
+    {% if Users.haveToPaginate %}
+    {% trans from "Admingenerator" %}Display <b>%start%</b> - <b>%end%</b> of <b>%count%</b> results{% endtrans %}
+    {% elseif  count > 0  %}
+    {% trans from "Admingenerator" %}Display all <b>%count%</b> results{% endtrans %}
+    {% endif %}
+</div>
+{% endblock %}
+    {% block form_batch_actions %}
+        {% endblock %}
+
+        <table>
+            {% block list_thead %}
+        <thead>
+            <tr class="list_thead">
+                                                <th class="list_thead_column{% if 1 %} sortable{% if sortColumn == 'Username' and sortOrder == 'ASC' %} sorted-asc{% elseif sortColumn == 'Username' and sortOrder == 'DESC' %} sorted-desc{% endif %}{% endif %}">
+                    {% if sortColumn == 'Username' and sortOrder == 'ASC' %}
+                            <a href="?sort=Username&order_by=desc">
+                        {% else %}
+                            <a href="?sort=Username&order_by=asc">
+                        {% endif %}
+                                Username
+                    </a>
+                        {% if sortColumn == 'Username' %}
+                            <span class="arrow
+                            {% if sortColumn == 'Username' and sortOrder == 'ASC' %}
+                                order_asc
+                            {% else %}
+                                order_desc
+                            {% endif %}
+                            "> </span>
+                        {% endif %}
+                    </th>
+                                                <th class="list_thead_column{% if 1 %} sortable{% if sortColumn == 'Email' and sortOrder == 'ASC' %} sorted-asc{% elseif sortColumn == 'Email' and sortOrder == 'DESC' %} sorted-desc{% endif %}{% endif %}">
+                    {% if sortColumn == 'Email' and sortOrder == 'ASC' %}
+                            <a href="?sort=Email&order_by=desc">
+                        {% else %}
+                            <a href="?sort=Email&order_by=asc">
+                        {% endif %}
+                                Email
+                    </a>
+                        {% if sortColumn == 'Email' %}
+                            <span class="arrow
+                            {% if sortColumn == 'Email' and sortOrder == 'ASC' %}
+                                order_asc
+                            {% else %}
+                                order_desc
+                            {% endif %}
+                            "> </span>
+                        {% endif %}
+                    </th>
+                                <th class="actions">{% trans from "Admingenerator" %}list.actions{% endtrans %}</th>
+                </tr>
+        </thead>
+{% endblock %}
+{% block list_tbody %}
+    <tbody>
+        {% if Users|length > 0 %}
+
+        {% for User in Users %}
+        <tr class="list_trow">{% block list_row %}
+                        <td class="td_VARCHAR td_username">
+                    {% block list_td_column_username %}{{ User.username }}{% endblock %}
+                </td>
+                        <td class="td_VARCHAR td_email">
+                    {% block list_td_column_email %}{{ User.email }}{% endblock %}
+                </td>
+        {% endblock %}
+    {% block list_object_actions %}
+                 <td class="actions">
+                            
+                <a class="edit" href="{{ path("Deuteron_Bundle_UserBundle_User_edit", { 'pk': User.Id }) }}" > </a>
+
+                                            
+                <a class="delete" href="{{ path("Deuteron_Bundle_UserBundle_User_delete", { 'pk': User.Id }) }}" > </a>
+
+                                     </td>
+        {% endblock %}
+
+        </tr>
+        {% endfor %}
+
+        {% else %}
+        <tr class="list_trow no_results_row">
+            <td colspan="3">{% trans from "Admingenerator" %}list.no_results{% endtrans %}</td>
+        </tr>
+        {% endif %}
+    </tbody>
+{% endblock %}
+
+        </table>{% block list_paginator %}
+    <div class="pagination">
+        {{ pagerfanta(Users, 'admingenerator') }}
+    </div>
+    {% endblock %}
+    {% block list_batch_actions %}
+        {% endblock %}
+{% block list_actions %}
+         <ul class="actions">
+                    
+            <li><a class="new" href="{{ path("Deuteron_Bundle_UserBundle_User_new") }}">{% trans from "Admingenerator" %}New{% endtrans %}</a></li>
+
+                            </ul>
+    {% endblock %}
+    {% block endform_batch_actions %}
+        {% endblock %}
+
+    </div>
+    {% block filters %}
+                <div class="filters">
+            <table>
+                <thead>
+                    <tr>
+                        <th>{% trans from "Admingenerator" %}list.filters{% endtrans %}</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>{% block list_filters %}
+<form action="{{ path("Deuteron_Bundle_UserBundle_User_filters") }}" method="post" {{ form_enctype(form) }}>
+    <fieldset class="form_block form_fieldset_NONE">
+        {{ form_errors(form) }}
+                         <div class="form_row">
+             <div class="form_field field_text field_username">
+                {{ form_label(form['username'], 'Username' ) }}
+                {{ form_widget(form['username']) }}
+                {{ form_errors(form['username']) }}
+            </div>
+        </div>
+                                 <div class="form_row">
+             <div class="form_field field_text field_email">
+                {{ form_label(form['email'], 'Email' ) }}
+                {{ form_widget(form['email']) }}
+                {{ form_errors(form['email']) }}
+            </div>
+        </div>
+                        <ul class="actions">
+            <li>
+                 {{ form_rest(form) }}
+                 <input type="submit" class="submit_button" value="{% trans from "Admingenerator" %}list.filter.btn_filter{% endtrans %}" />
+                 <input type="submit" class="reset_button" name="reset" value="{% trans from "Admingenerator" %}list.filter.btn_reset{% endtrans %}" />
+            </li>
+        </ul>
+    </fieldset>
+</form>
+{% endblock %}
+</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+            {% endblock %}
+{% endblock %}

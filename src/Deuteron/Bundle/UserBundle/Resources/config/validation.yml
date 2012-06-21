@@ -1,0 +1,8 @@
+Deuteron\Bundle\UserBundle\Model\User:
+  constraints:
+    - Propel\PropelBundle\Validator\Constraints\UniqueObject: username
+  properties:
+    username:
+      - NotBlank: ~
+    password:
+      - NotBlank: ~
