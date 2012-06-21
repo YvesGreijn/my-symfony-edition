@@ -1,14 +1,67 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <meta charset="UTF-8" />
-        <title>{% block title %}Welcome!{% endblock %}</title>
+        <meta charset="utf-8" />
+
+        <title>{% block title %}Welcome{% endblock %}</title>
+
+        <meta name="author" content="Maxime AILLOUD">
+        <meta name="description" content="Symfony Edition by maxime AILLOUD">
+
+        <link rel="stylesheet" href="{{ asset('bundles/deuteronproject/css/bootstrap.min.css') }}" />
+        <link rel="stylesheet" href="{{ asset('bundles/deuteronproject/css/style_bootstrap.css') }}" />
+        <link rel="stylesheet" href="{{ asset('bundles/deuteronproject/css/style.css') }}" />
         {% block stylesheets %}{% endblock %}
-        <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
+
+        <!-- Le fav and touch icons -->
+        <link rel="shortcut icon" href="{{ asset('favicon.ico') }}" />
     </head>
+
     <body>
-        {% block body %}{% endblock %}
+
+        <!--
+        ======================= Topbar ===========================
+        -->
+        <header id="topbar" class="topbar">
+        <div class="fill">
+            <div class="container">
+                <h3><a href="{{ path('index') }}" title="Retour à l'accueil">My Symfony Edition</a></h3>
+
+                {% if is_granted('IS_AUTHENTICATED_FULLY') %}
+                <p class="pull-right">
+                    <a href="{{ path('fos_user_profile_show') }}" title="Voir son profil">{{ app.user.username }}</a> <a href="{{ path('fos_user_security_logout') }}" title="Déconnexion">Déconnexion</a>
+                </p>
+                {% else %}
+                <p class="pull-right">
+                    <a href="{{ path('fos_user_security_login') }}" title="Se connecter">Connexion</a>
+                </p>
+                {% endif %}
+            </div>
+        </div>
+        </header>
+        <!--
+        ======================= Topbar ===========================
+        -->
+
+        <!--
+        ======================= Container ===========================
+        -->
+        <section id="container" class="container">
+
+            {% block content %}
+            {% block fos_user_content %}{% endblock %}
+            {% endblock %}
+
+        </section>
+        <!--
+        ======================= Container ===========================
+        -->
+
+        <script src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
+        <script src="{{ asset('bundles/deuteronproject/js/vendor/bootstrap-dropdown.js') }}"></script>
+        <script src="{{ asset('bundles/deuteronproject/js/utils/dropdown.js') }}"></script>
         {% block javascripts %}{% endblock %}
+
     </body>
 </html>
 

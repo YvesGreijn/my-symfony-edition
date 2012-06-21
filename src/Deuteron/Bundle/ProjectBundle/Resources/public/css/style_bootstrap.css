@@ -1,0 +1,35 @@
+.pagination .next a 
+{
+  border-right: 1px solid;
+}
+
+.pagination .last a 
+{
+  border: 0;
+}
+
+#listMovies form
+{
+  margin-bottom: 0px;
+}
+
+#listMovies .span3
+{
+  margin-top: 10px;
+}
+
+.inputs-list input
+{
+  float: left;
+  margin-right: 10px;
+}
+
+.inputs-list input[type=radio], .inputs-list input[type=checkbox]
+{
+  margin-left: 0;
+}
+
+form .clearfix
+{
+  margin-bottom: 5px;
+}

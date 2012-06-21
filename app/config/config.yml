@@ -72,4 +72,4 @@ admingenerator_generator:
     use_doctrine_odm:     false
 
 admingenerator_user:
-     login_template: DeuteronProjectBundle::layout.html.twig
+    login_template: DeuteronProjectBundle::layout.html.twig

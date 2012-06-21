@@ -1,0 +1,223 @@
+#container
+{
+    margin-top: 60px;
+}
+
+.float-left
+{
+  float: left;
+}
+
+.float-right
+{
+  float: right;
+}
+
+.float-none
+{
+  float: none;
+}
+
+.clear-float
+{
+  clear: both;
+}
+
+#mainFooter
+{
+  padding-bottom: 10px;
+  background-color: #E5E5E5;
+}
+
+/**** Filters ****/
+.filters li
+{
+  display: inline-block;
+  width: 50px;
+}
+
+.filters a
+{
+  display: block;
+  text-align: center;
+}
+
+.filters a:hover
+{
+  text-decoration: none;
+  background-color: #F89406;
+}
+/**** Filters ****/
+
+/**** Movie list header ****/
+#movies_per_page_form label
+{
+  margin-left: 15px;
+  margin-right: 5px;
+}
+
+.icon
+{
+  text-decoration:none;
+  text-align: left;
+  text-indent: -9999px;
+}
+
+a.icon
+{
+  display:inline-block;
+  width: 16px;
+  height: 16px;
+}
+
+.blu-ray { background: transparent url('../../movie/img/blu-ray.png') no-repeat left; }
+.dvd { background: transparent url('../../movie/img/dvd.png') no-repeat left; }
+.movie_delete { background: transparent url('../../movie/img/delete.png') no-repeat left; }
+.movie_edit { background: transparent url('../../movie/img/movie-edit.png') no-repeat left; }
+/**** Movie list header ****/
+
+/**** Post list ****/
+
+  /** header **/
+  #list_posts article h1
+  {
+    background: #ccc;
+    padding: 0 0 0 10px;
+    font-size: 16px;
+
+    /* Thickness of the bar more easily achieved with line-height
+       since padding would push link inward.  */
+    line-height: 2;
+  }
+  #list_posts article h1 a
+  {
+    float: right;
+    position: relative;
+    text-decoration: none;
+    color: #333;
+    padding: 0 10px;
+    border-left: 5px solid white;
+  }
+  #list_posts article h1 a:before,
+  #list_posts article h1 a:after
+  {
+    content: "";
+    position: absolute;
+    /* Pushed down half way, will get pulled back up half height of triangle
+       ensures centering if font-size or line-height changes */
+    top: 50%;
+    width: 0;
+    height: 0;
+  }
+  #list_posts article h1 a:before
+  {
+    left: -12px;
+    /* Triangle */
+    border-top: 8px solid transparent;
+    border-bottom: 8px solid transparent;
+    border-right: 8px solid white;
+    /* Pull-up */
+    margin-top: -8px;
+  }
+  #list_posts article h1 a:after
+  {
+    /* Smaller and different position triangle */
+    left: -5px;
+    border-top: 6px solid transparent;
+    border-bottom: 6px solid transparent;
+    border-right: 6px solid #CCC;
+    margin-top: -6px;
+  }
+  /** header **/
+
+  /** footer **/
+  #list_posts footer
+  {
+    padding-top: 0px;
+    margin-bottom: 15px;
+  }
+  /** footer **/
+
+/**** Post list ****/
+
+/**** Table ****/
+td .icon
+{
+  margin-right: 10px;
+}
+
+th.state
+{
+  width: 80px;
+}
+
+th.support
+{
+  width: 50px;
+}
+
+td.support
+{
+  background-position: center;
+}
+
+th.table_actions
+{
+  width: 60px;
+}
+
+/**** Table ****/
+
+/**** Forms ****/
+form label.required:after
+{
+  content: " * " ;
+  color: red;
+  font-weight: bold;
+}
+
+form #movie_support > input + label
+{
+  display: inline-block;
+  height: 30px;
+  width: 50px;
+  text-indent: -9999px;
+  cursor: pointer;
+  margin-right: 15px;
+  margin-left: 0;
+  border: 1px solid #CCCCCC;
+  border-radius: 6px;
+}
+form #movie_support > input + label:hover
+{
+  box-shadow: inset 0 0 5px 5px rgba(0, 0, 0, 0.1);
+}
+form #movie_support > input:checked + label
+{
+  box-shadow: 0 0 5px 5px rgba(0, 0, 0, 0.1) inset;
+}
+
+form #movie_support > input#movie_support_Blu-ray + label
+{
+  background: transparent url('../../movie/img/blu-ray.png') no-repeat left;
+}
+
+form #movie_support > input#movie_support_DVD + label
+{
+  background: transparent url('../../movie/img/dvd.png') no-repeat left;
+}
+
+form #movie_support > input[type=radio]
+{
+  display: none;
+}
+/**** Forms ****/
+
+/**** Bredcrumb ****/
+.breadcrumb li ~ li:before
+{
+  content: '/';
+  padding: 0 5px;
+  color: #bfbfbf;
+}
+/**** Bredcrumb ****/
