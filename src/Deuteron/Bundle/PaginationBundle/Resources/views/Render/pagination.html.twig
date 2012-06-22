@@ -4,12 +4,10 @@
 {% set disableEndLinks = paginator.isLastPage %}
 <nav class="pagination">
   <ul>
-    {% if not disableStartLinks or displayFirstLinks %}<li class="first{% if disableStartLinks %} disabled{% endif %}"><a href="{{ path(url, urlParameters|merge({'page': paginator.getFirstPage})) }}">&larr; {{ label.firstLinkLabel }}</a></li>{% endif %}
-    {% if not disableStartLinks or displayFirstLinks %}<li class="prev{% if disableStartLinks %} disabled{% endif %}"><a href="{{ path(url, urlParameters|merge({'page': paginator.getPreviousPage})) }}">&larr; {{ label.previousLinkLabel }}</a></li>{% endif %}
     {% for link in paginator.getLinks %}
     <li {% if paginator.getPage == link %} class="active" {% endif %}><a href="{{ path(url, urlParameters|merge({'page': link})) }}">{{ link }}</a></li>
     {% endfor %}
-    {% if not disableEndLinks or displayLastLinks %}<li class="nextprev{% if disableEndLinks %} disabled{% endif %}"><a href="{{ path(url, urlParameters|merge({'page': paginator.getNextPage})) }}">{{ label.nextLinkLabel }} &rarr; </a></li>{% endif %}
+    {% if not disableEndLinks or displayLastLinks %}<li class="next{% if disableEndLinks %} disabled{% endif %}"><a href="{{ path(url, urlParameters|merge({'page': paginator.getNextPage})) }}">{{ label.nextLinkLabel }} &rarr; </a></li>{% endif %}
     {% if not disableEndLinks or displayLastLinks %}<li class="last{% if disableEndLinks %} disabled{% endif %}"><a href="{{ path(url, urlParameters|merge({'page': paginator.getLastPage})) }}">{{ label.lastLinkLabel }} &rarr; </a></li>{% endif %}
   </ul>
 </nav>
