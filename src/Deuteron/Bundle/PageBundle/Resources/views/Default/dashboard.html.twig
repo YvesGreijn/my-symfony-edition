@@ -6,6 +6,6 @@
 <h1>Administration</h1>
 
 {% for link in links %}
-  <a href="{{ path(link.url) }}" title="{{ link.label }}">{{ link.label }}</a>
+    <a href="{{ path(link.url) }}" title="{{ link.label }}">{{ link.label }}</a>
 {% endfor %}
 {% endblock %}

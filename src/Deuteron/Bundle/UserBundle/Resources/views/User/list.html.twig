@@ -5,78 +5,78 @@
 {% block content %}
 <section id="list_user">
 
-  <div class="page-header">
-    <div class="row">
+    <div class="page-header">
+        <div class="row">
 
-      <div class="span6">
-        <h1>Liste des utilisateurs</h1>
-      </div>
+            <div class="span6">
+                <h1>Liste des utilisateurs</h1>
+            </div>
 
-      <div class="span4">
-        <a href="{{ path('user_new') }}" title="Ajouter un utilisateur">Ajouter un utilisateur</a>
-      </div>
+            <div class="span4">
+                <a href="{{ path('user_new') }}" title="Ajouter un utilisateur">Ajouter un utilisateur</a>
+            </div>
 
+        </div>
     </div>
-  </div>
-  {% if app.session.hasFlash('user_add_success') %}
-  <div class="alert-message success fade in">
-    <a class="close" href="#">×</a>
-    <p><strong>Good job!</strong> {{ app.session.flash('user_add_success') }}</p>
-  </div>
-  {% endif %}
-  {% if app.session.hasFlash('user_add_error') %}
-  <div class="alert-message error fade in">
-    <a class="close" href="#">×</a>
-    <p><strong>Too bad!</strong> {{ app.session.flash('user_add_error') }}</p>
-  </div>
-  {% endif %}
-  {% if app.session.hasFlash('user_edit_success') %}
-  <div class="alert-message success fade in">
-    <a class="close" href="#">×</a>
-    <p><strong>Good job!</strong> {{ app.session.flash('user_edit_success') }}</p>
-  </div>
-  {% endif %}
-  {% if app.session.hasFlash('user_edit_error') %}
-  <div class="alert-message error fade in">
-    <a class="close" href="#">×</a>
-    <p><strong>Too bad!</strong> {{ app.session.flash('user_edit_error') }}</p>
-  </div>
-  {% endif %}
-  {% if app.session.hasFlash('user_delete_success') %}
-  <div class="alert-message success fade in">
-    <a class="close" href="#">×</a>
-    <p><strong>Good job!</strong> {{ app.session.flash('user_delete_success') }}</p>
-  </div>
-  {% endif %}
-  {% if app.session.hasFlash('user_delete_error') %}
-  <div class="alert-message error fade in">
-    <a class="close" href="#">×</a>
-    <p><strong>Too bad!</strong> {{ app.session.flash('user_delete_error') }}</p>
-  </div>
-  {% endif %}
-  <table class="clear-float zebra-striped">
-    <thead>
-      <tr>
-        <th class="yellow">Nom d'utilisateur</th>
-        <th class="purple table_actions">Actions</th>
-      </tr>
-    </thead>
-    <tbody>
-    {% for user in paginator %}
-      <tr>
-        <td>{{ user.Username }}</td>
-        <td>
-          <a href="{{ path('user_edit', { 'id': user.Id}) }}" title="Editer l'utilisateur" class="user_edit">Editer</a>
-          <a href="{{ path('user_delete', { 'id': user.Id}) }}" title="Supprimer l'utilisateur" class="user_delete" data-confirm-title="Suppression d'un utilisateur" data-confirm-message="Voulez-vous vraiment supprimer cet utilisateur ?">Supprimer</a>
-        </td>
-      </tr>
-    {% else %}
-      <tr><td colspan="2">Aucun utilisateur enregistré.</td></tr>
-    {% endfor %}
-    </tbody>
-  </table>
+    {% if app.session.hasFlash('user_add_success') %}
+    <div class="alert-message success fade in">
+        <a class="close" href="#">×</a>
+        <p><strong>Good job!</strong> {{ app.session.flash('user_add_success') }}</p>
+    </div>
+    {% endif %}
+    {% if app.session.hasFlash('user_add_error') %}
+    <div class="alert-message error fade in">
+        <a class="close" href="#">×</a>
+        <p><strong>Too bad!</strong> {{ app.session.flash('user_add_error') }}</p>
+    </div>
+    {% endif %}
+    {% if app.session.hasFlash('user_edit_success') %}
+    <div class="alert-message success fade in">
+        <a class="close" href="#">×</a>
+        <p><strong>Good job!</strong> {{ app.session.flash('user_edit_success') }}</p>
+    </div>
+    {% endif %}
+    {% if app.session.hasFlash('user_edit_error') %}
+    <div class="alert-message error fade in">
+        <a class="close" href="#">×</a>
+        <p><strong>Too bad!</strong> {{ app.session.flash('user_edit_error') }}</p>
+    </div>
+    {% endif %}
+    {% if app.session.hasFlash('user_delete_success') %}
+    <div class="alert-message success fade in">
+        <a class="close" href="#">×</a>
+        <p><strong>Good job!</strong> {{ app.session.flash('user_delete_success') }}</p>
+    </div>
+    {% endif %}
+    {% if app.session.hasFlash('user_delete_error') %}
+    <div class="alert-message error fade in">
+        <a class="close" href="#">×</a>
+        <p><strong>Too bad!</strong> {{ app.session.flash('user_delete_error') }}</p>
+    </div>
+    {% endif %}
+    <table class="clear-float zebra-striped">
+        <thead>
+            <tr>
+                <th class="yellow">Nom d'utilisateur</th>
+                <th class="purple table_actions">Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for user in paginator %}
+            <tr>
+                <td>{{ user.Username }}</td>
+                <td>
+                    <a href="{{ path('user_edit', { 'id': user.Id}) }}" title="Editer l'utilisateur" class="user_edit">Editer</a>
+                    <a href="{{ path('user_delete', { 'id': user.Id}) }}" title="Supprimer l'utilisateur" class="user_delete" data-confirm-title="Suppression d'un utilisateur" data-confirm-message="Voulez-vous vraiment supprimer cet utilisateur ?">Supprimer</a>
+                </td>
+            </tr>
+        {% else %}
+            <tr><td colspan="2">Aucun utilisateur enregistré.</td></tr>
+        {% endfor %}
+        </tbody>
+    </table>
 
-  {{ deuteron_pagination_render(paginator, paginationOptions) }}
+    {{ deuteron_pagination_render(paginator, paginationOptions) }}
 
 </section>
 {% endblock %}
