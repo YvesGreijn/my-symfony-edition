@@ -7,9 +7,20 @@
     <parameters>
         <parameter key="propel.connection.class">PDO</parameter>
         <parameter key="propel.connection_factory.class">Propel</parameter>
+        <parameter key="menu_builder.class">Deuteron\Bundle\ProjectBundle\Menu\MenuBuilder</parameter>
+        <parameter key="menu.item.class">Knp\Menu\MenuItem</parameter>
     </parameters>
 
     <services>
         <service id="propel.connection" class="%propel.connection.class%" factory-class="%propel.connection_factory.class%" factory-method="getConnection" abstract="false" />
+
+        <service id="project.menu_builder" class="%menu_builder.class%">
+            <argument type="service" id="knp_menu.factory" />
+            <argument type="service" id="security.context" />
+        </service>
+        <service id="project.menu.main" class="%menu.item.class%" factory-service="project.menu_builder" factory-method="createMainMenu" scope="request">
+            <argument type="service" id="request" />
+            <tag name="knp_menu.menu" alias="main" />
+        </service>
     </services>
 </container>

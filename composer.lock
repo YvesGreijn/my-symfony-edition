@@ -1,21 +1,6 @@
 {
-    "hash": "44f67022fc0d62f12818721a92b28ce4",
+    "hash": "8a16ce6ac38f721986d425d5a95d9c77",
     "packages": [
-        {
-            "package": "cedriclombardot/admingenerator-generator-bundle",
-            "version": "dev-master",
-            "source-reference": "50bfd6b4fbc4840daf59a2cbbe24eb162fd98d9e"
-        },
-        {
-            "package": "cedriclombardot/admingenerator-user-bundle",
-            "version": "dev-master",
-            "source-reference": "97862e4d7f69011781fbcea374e9d82fe3ad6729"
-        },
-        {
-            "package": "cedriclombardot/twig-generator",
-            "version": "dev-master",
-            "source-reference": "5d0a63b8a55f02845b0eb20cfb338b161b25a582"
-        },
         {
             "package": "doctrine/common",
             "version": "dev-master",
@@ -30,7 +15,7 @@
         {
             "package": "friendsofsymfony/user-bundle",
             "version": "dev-master",
-            "source-reference": "5cda8dbd0df71ac1cdb3d6dc077b16108e98fe3a"
+            "source-reference": "6200cecef5e1ae9c473d00220800b5cc2d09c7b1"
         },
         {
             "package": "jms/aop-bundle",
@@ -94,11 +79,6 @@
             "version": "1.1.0"
         },
         {
-            "package": "pagerfanta/pagerfanta",
-            "version": "dev-master",
-            "source-reference": "c490684def33e992241e7fad33bcbd03d9d18643"
-        },
-        {
             "package": "phing/phing",
             "version": "2.4.12"
         },
@@ -114,7 +94,7 @@
         {
             "package": "sensio/distribution-bundle",
             "version": "dev-master",
-            "source-reference": "cf64fbe0d4cd0d6b88b2018efb037f18a0753271"
+            "source-reference": "a360ad61fe34206a7295c1ef00b5455b2b2e1071"
         },
         {
             "package": "sensio/framework-extra-bundle",
@@ -161,7 +141,7 @@
         {
             "package": "symfony/symfony",
             "version": "dev-master",
-            "source-reference": "55c6df995fd89a76ae09068da806eb9ae5e4a2e0"
+            "source-reference": "v2.1.0-BETA1"
         },
         {
             "package": "twig/extensions",
@@ -178,11 +158,6 @@
             "package": "twig/twig",
             "version": "dev-master",
             "source-reference": "4679ad51c5390648b7ea4c8f0ecd2c0c344145ba"
-        },
-        {
-            "package": "white-october/pagerfanta-bundle",
-            "version": "dev-master",
-            "source-reference": "6d7c84759ca85a4c3a993a844922dc4629d42adf"
         },
         {
             "package": "willdurand/propel-typehintable-behavior",
@@ -204,8 +179,6 @@
         "sensio/framework-extra-bundle": 20,
         "sensio/generator-bundle": 20,
         "friendsofsymfony/user-bundle": 20,
-        "cedriclombardot/admingenerator-generator-bundle": 20,
-        "cedriclombardot/admingenerator-user-bundle": 20,
         "knplabs/knp-paginator-bundle": 20,
         "knplabs/knp-menu-bundle": 20,
         "willdurand/propel-typehintable-behavior": 20

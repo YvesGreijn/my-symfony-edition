@@ -27,6 +27,8 @@
             <div class="container">
                 <h3><a href="{{ path('index') }}" title="Retour à l'accueil">My Symfony Edition</a></h3>
 
+                {{ knp_menu_render('main', {'currentClass': 'active'}) }}
+
                 {% if is_granted('IS_AUTHENTICATED_FULLY') %}
                 <p class="pull-right">
                     <a href="{{ path('fos_user_profile_show') }}" title="Voir son profil">{{ app.user.username }}</a>
