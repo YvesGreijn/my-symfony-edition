@@ -2,11 +2,11 @@
 <nav class="pagination">
     <ul>
     {% if first is defined and current != first %}
-        <li class="first"><a href="{{ path(route, query|merge({(pageParameterName): first})) }}">&larr;&larr;</a></li>
+        <li class="first"><a href="{{ path(route, query|merge({(pageParameterName): first})) }}">&lt;&lt;</a></li>
     {% endif %}
 
     {% if previous is defined %}
-        <li class="prev"><a href="{{ path(route, query|merge({(pageParameterName): previous})) }}">&larr;</a></li>
+        <li class="prev"><a href="{{ path(route, query|merge({(pageParameterName): previous})) }}">&lt;</a></li>
     {% endif %}
 
     {% for page in pagesInRange %}
@@ -19,24 +19,12 @@
     {% endfor %}
 
     {% if next is defined %}
-        <li class="next"><a href="{{ path(route, query|merge({(pageParameterName): next})) }}">&rarr;</a></li>
+        <li class="next"><a href="{{ path(route, query|merge({(pageParameterName): next})) }}">&gt;</a></li>
     {% endif %}
 
     {% if last is defined and current != last %}
-        <li class="last"><a href="{{ path(route, query|merge({(pageParameterName): last})) }}">&rarr;&rarr;</a></li>
+        <li class="last"><a href="{{ path(route, query|merge({(pageParameterName): last})) }}">&gt;&gt;</a></li>
     {% endif %}
     </ul>
 </nav>
 {% endif %}
-
-{#<nav class="pagination">#}
-  {#<ul>#}
-    {#<li class="first"><a href="{{ path(url, urlParameters|merge({'page': paginator.getFirstPage})) }}">&larr; {{ label.firstLinkLabel }}</a></li>{% endif %}#}
-    {#<li class="prev"><a href="{{ path(url, urlParameters|merge({'page': paginator.getPreviousPage})) }}">&larr; {{ label.previousLinkLabel }}</a></li>{% endif %}#}
-    {#{% for link in paginator.getLinks %}#}
-    {#<li {% if paginator.getPage == link %} class="active" {% endif %}><a href="{{ path(url, urlParameters|merge({'page': link})) }}">{{ link }}</a></li>#}
-    {#{% endfor %}#}
-    {#<li class="next"><a href="{{ path(url, urlParameters|merge({'page': paginator.getNextPage})) }}">{{ label.nextLinkLabel }} &rarr; </a></li>{% endif %}#}
-    {#<li class="last"><a href="{{ path(url, urlParameters|merge({'page': paginator.getLastPage})) }}">{{ label.lastLinkLabel }} &rarr; </a></li>{% endif %}#}
-  {#</ul>#}
-{#</nav>#}

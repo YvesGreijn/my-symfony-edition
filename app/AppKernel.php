@@ -23,7 +23,6 @@ class AppKernel extends Kernel
             new Knp\Bundle\PaginatorBundle\KnpPaginatorBundle(),
             new Deuteron\Bundle\ProjectBundle\DeuteronProjectBundle(),
             new Deuteron\Bundle\UserBundle\DeuteronUserBundle(),
-            new Deuteron\Bundle\PaginationBundle\DeuteronPaginationBundle(),
             new Deuteron\Bundle\PageBundle\DeuteronPageBundle(),
         );
 

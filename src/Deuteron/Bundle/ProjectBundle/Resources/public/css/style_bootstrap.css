@@ -1,21 +1,11 @@
-.pagination .next a 
+.pagination .next a
 {
-  border-right: 1px solid;
+  border-right: 1px solid #DDD;
 }
 
-.pagination .last a 
+.pagination .last a
 {
   border: 0;
-}
-
-#listMovies form
-{
-  margin-bottom: 0px;
-}
-
-#listMovies .span3
-{
-  margin-top: 10px;
 }
 
 .inputs-list input

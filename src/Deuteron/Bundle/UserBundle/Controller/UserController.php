@@ -18,29 +18,20 @@ class UserController extends Controller
      */
     public function listAction($page)
     {
-        $users = Model\UserQuery::create()
-          ->select(array('Id', 'Username'))
-          ->paginate($page)
-        ;
         $userQuery = Model\UserQuery::create()
           ->select(array('Id', 'Username'))
         ;
 
         /** @var $paginator \Knp\Component\Pager\Paginator */
         $paginator = $this->get('knp_paginator');
+        /** @var $pagination \Knp\Bundle\PaginatorBundle\Pagination\SlidingPagination */
         $pagination = $paginator->paginate(
             $userQuery,
-            $this->get('request')->query->get('page', 1)/*page number*/,
-            10/*limit per page*/
+            $page
         );
 
         return array(
-          'pagination'        => $pagination,
-          'paginator'         => $users,
-          'paginationOptions' => array(
-              'paginationUrl'   => 'user_list',
-          ),
-          'page'    =>        $page
+          'pagination' => $pagination
         );
     }
 

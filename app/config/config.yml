@@ -66,6 +66,5 @@ knp_menu:
     twig: true
 
 knp_paginator:
-    page_range:                 10 # default page range used in pagination control
     template:
-        pagination: DeuteronProjectBundle:Pagination:sliding.html.twig     # sliding pagination controls template
+        pagination: DeuteronProjectBundle:Pagination:sliding.html.twig
