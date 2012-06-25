@@ -37,14 +37,14 @@ class MenuBuilder
    */
   public function createMainMenu(Request $request)
   {
-    $menu = $this->factory->createItem('root');
+    $menu = $this->factory->createItem('root', array('childrenAttributes' => array('class' => 'nav')));
 
     $menu->addChild('A propos',  array('route' => 'about'));
 
     if(true === $this->securityContext->isGranted('ROLE_SUPER_ADMIN'))
     {
       $menu
-        ->addChild('Administration',  array('route' => 'adminDashBoard'))
+        ->addChild('Administration',  array('route' => 'adminDashboard'))
       ;
     }
 

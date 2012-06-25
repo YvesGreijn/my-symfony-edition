@@ -24,6 +24,7 @@ class AppKernel extends Kernel
             new Deuteron\Bundle\ProjectBundle\DeuteronProjectBundle(),
             new Deuteron\Bundle\UserBundle\DeuteronUserBundle(),
             new Deuteron\Bundle\PageBundle\DeuteronPageBundle(),
+            new Deuteron\Bundle\AdminBundle\DeuteronAdminBundle(),
         );
 
         if (in_array($this->getEnvironment(), array('dev', 'test'))) {

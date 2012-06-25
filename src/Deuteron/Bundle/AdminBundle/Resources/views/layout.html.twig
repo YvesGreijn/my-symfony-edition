@@ -3,20 +3,20 @@
     <head>
         <meta charset="utf-8" />
 
-        <title>{% block title %}Welcome{% endblock %}</title>
+        <title>{% block title %}ADministration{% endblock %}</title>
 
         <meta name="author" content="Maxime AILLOUD">
         <meta name="description" content="Symfony Edition by maxime AILLOUD">
 
         <link rel="stylesheet" href="{{ asset('bundles/deuteronproject/css/bootstrap.min.css') }}" />
-        <link rel="stylesheet" href="{{ asset('bundles/deuteronproject/css/style.css') }}" />
+        <link rel="stylesheet" href="{{ asset('bundles/deuteronadmin/css/style.css') }}" />
         {% block stylesheets %}{% endblock %}
 
         <!-- Le fav and touch icons -->
         <link rel="shortcut icon" href="{{ asset('favicon.ico') }}" />
     </head>
 
-    <body class="container">
+    <body>
 
         <!--
         ======================= Topbar ===========================
@@ -46,10 +46,9 @@
         <!--
         ======================= Container ===========================
         -->
-        <section class="container">
+        <section>
 
             {% block content %}
-            {% block fos_user_content %}{% endblock %}
             {% endblock %}
 
         </section>
