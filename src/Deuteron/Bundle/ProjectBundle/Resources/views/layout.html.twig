@@ -25,7 +25,7 @@
         <header id="mainMenu" class="navbar">
             <div class="navbar-inner">
                 <div class="container">
-                    <a class="brand" href="{{ path('index') }}" title="Retour à l'accueil">My Symfony Edition</a>
+                    <a class="brand" href="{{ path('index') }}" title="Retour à l'accueil">{{ app_name }}</a>
 
                     {{ knp_menu_render('main', {'currentClass': 'active'}) }}
 

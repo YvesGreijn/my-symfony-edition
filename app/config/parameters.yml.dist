@@ -1,4 +1,5 @@
 parameters:
+    app_name:          My Symfony Edition
     database_driver:   pdo_mysql
     database_host:     localhost
     database_port:     ~
