@@ -9,17 +9,11 @@ use Sensio\Bundle\FrameworkExtraBundle\Configuration\Template;
 class DefaultController extends Controller
 {
     /**
-     * @Route("/", name="adminDashboard")
+     * @Route("/", name="admin_dashboard")
      * @Template()
      */
     public function indexAction()
     {
-        $links = array(
-            array(
-                'url'   => 'user_list',
-                'label' => 'Gestion des utilisateurs'
-            )
-        );
-        return array('links' => $links);
+        return array();
     }
 }

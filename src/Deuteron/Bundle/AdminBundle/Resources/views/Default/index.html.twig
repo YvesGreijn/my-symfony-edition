@@ -3,9 +3,178 @@
 {% block title %}Deuteron - Administration{% endblock %}
 
 {% block content %}
-<h1>Administration</h1>
-
-{% for link in links %}
-    <a href="{{ path(link.url) }}" title="{{ link.label }}">{{ link.label }}</a>
-{% endfor %}
+<h1>Overview</h1>
+<ul class="well overview unstyled">
+    <li><a href="#">3 Projects</a></li>
+    <li><a href="#">27 Tasks</a></li>
+    <li><a href="#">7 Messages</a></li>
+    <li><a href="#">5 Files</a></li>
+</ul>
+<h2>
+    Recent Activity
+</h2>
+<table class="table table-striped table-bordered">
+    <thead>
+        <tr>
+            <th>
+                Project
+            </th>
+            <th>
+                Client
+            </th>
+            <th>
+                Type
+            </th>
+            <th>
+                Date
+            </th>
+            <th>
+                View
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+                Nike.com Redesign
+            </td>
+            <td>
+                Monsters Inc
+            </td>
+            <td>
+                New Task
+            </td>
+            <td>
+                4 days ago
+            </td>
+            <td>
+                <a href="#" class="view-link">View</a>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Nike.com Redesign
+            </td>
+            <td>
+                Monsters Inc
+            </td>
+            <td>
+                New Message
+            </td>
+            <td>
+                5 days ago
+            </td>
+            <td>
+                <a href="#" class="view-link">View</a>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Nike.com Redesign
+            </td>
+            <td>
+                Monsters Inc
+            </td>
+            <td>
+                New Project
+            </td>
+            <td>
+                5 days ago
+            </td>
+            <td>
+                <a href="#" class="view-link">View</a>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Twitter Server Consulting
+            </td>
+            <td>
+                Bad Robot
+            </td>
+            <td>
+                New Task
+            </td>
+            <td>
+                6 days ago
+            </td>
+            <td>
+                <a href="#" class="view-link">View</a>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Childrens Book Illustration
+            </td>
+            <td>
+                Evil Genius
+            </td>
+            <td>
+                New Message
+            </td>
+            <td>
+                9 days ago
+            </td>
+            <td>
+                <a href="#" class="view-link">View</a>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Twitter Server Consulting
+            </td>
+            <td>
+                Bad Robot
+            </td>
+            <td>
+                New Task
+            </td>
+            <td>
+                16 days ago
+            </td>
+            <td>
+                <a href="#" class="view-link">View</a>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Twitter Server Consulting
+            </td>
+            <td>
+                Bad Robot
+            </td>
+            <td>
+                New Project
+            </td>
+            <td>
+                16 days ago
+            </td>
+            <td>
+                <a href="#" class="view-link">View</a>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Twitter Server Proposal
+            </td>
+            <td>
+                Bad Robot
+            </td>
+            <td>
+                Completed Project
+            </td>
+            <td>
+                20 days ago
+            </td>
+            <td>
+                <a href="#" class="view-link">View</a>
+            </td>
+        </tr>
+    </tbody>
+</table>
+<ul class="pager">
+    <li class="next">
+        <a href="activity.htm">More →</a>
+    </li>
+</ul>
 {% endblock %}

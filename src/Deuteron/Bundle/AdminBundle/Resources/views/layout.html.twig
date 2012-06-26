@@ -1,62 +1,30 @@
-<!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="utf-8" />
+{% extends 'DeuteronAdminBundle::base.html.twig' %}
 
-        <title>{% block title %}ADministration{% endblock %}</title>
-
-        <meta name="author" content="Maxime AILLOUD">
-        <meta name="description" content="Symfony Edition by maxime AILLOUD">
-
-        <link rel="stylesheet" href="{{ asset('bundles/deuteronproject/css/bootstrap.min.css') }}" />
-        <link rel="stylesheet" href="{{ asset('bundles/deuteronadmin/css/style.css') }}" />
-        {% block stylesheets %}{% endblock %}
-
-        <!-- Le fav and touch icons -->
-        <link rel="shortcut icon" href="{{ asset('favicon.ico') }}" />
-    </head>
-
-    <body>
-
-        <!--
-        ======================= Topbar ===========================
-        -->
-        <header id="mainMenu" class="navbar">
-            <div class="navbar-inner">
-                <div class="container">
-                    <a class="brand" href="{{ path('index') }}" title="Retour à l'accueil">My Symfony Edition</a>
-
-                    {{ knp_menu_render('main', {'currentClass': 'active'}) }}
-
-                    <ul class="nav pull-right">
-                    {% if is_granted('IS_AUTHENTICATED_FULLY') %}
-                        <li><a href="{{ path('fos_user_profile_show') }}" title="Voir son profil">{{ app.user.username }}</a></li>
-                        <li><a href="{{ path('fos_user_security_logout') }}">{{ 'layout.logout'|trans({}, 'FOSUserBundle') }}</a></li>
-                    {% else %}
-                        <li><a href="{{ path('fos_user_security_login') }}" title="Se connecter">Connexion</a></li>
-                    {% endif %}
+{% block globalcontent %}
+        <div class="row">
+            <div class="span3">
+                <div class="well" style="padding: 8px 0;">
+                    <ul class="nav nav-list">
+                        <li class="nav-header">Deuteron</li>
+                        <li class="active"><a href="{{ path('admin_dashboard') }}"><i class="icon-white icon-home"></i> Overview</a></li>
+                        <li><a href="{{ path('user_list')}}"><i class="icon-user"></i> Users</a></li>
+                        <li class="nav-header">
+                            Your Account
+                        </li>
+                        <li><a href="{{ path('fos_user_profile_show') }}" title="Voir son profil"><i class="icon-user"></i> Profile</a></li>
+                        <li><a href="settings"><i class="icon-cog"></i> Settings</a></li>
+                        <li class="divider">
+                        </li>
+                        <li><a href="help"><i class="icon-info-sign"></i> Help</a></li>
                     </ul>
                 </div>
             </div>
-        </header>
-        <!--
-        ======================= Topbar ===========================
-        -->
-
-        <!--
-        ======================= Container ===========================
-        -->
-        <section>
-
-            {% block content %}
-            {% endblock %}
-
-        </section>
-        <!--
-        ======================= Container ===========================
-        -->
-
-        {% block javascripts %}{% endblock %}
-
-    </body>
-</html>
+            <div class="span9">
+                {% block content %}
+                {% block fos_user_content %}
+                {% endblock fos_user_content %}
+                {% endblock %}
+            </div>
+        </div>
+{% endblock%}
+        

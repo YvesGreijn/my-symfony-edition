@@ -44,7 +44,7 @@ class MenuBuilder
     if(true === $this->securityContext->isGranted('ROLE_SUPER_ADMIN'))
     {
       $menu
-        ->addChild('Administration',  array('route' => 'adminDashboard'))
+        ->addChild('Administration',  array('route' => 'admin_dashboard'))
       ;
     }
 
