@@ -20,9 +20,14 @@
                 </div>
             </div>
             <div class="span9">
+                {% for key, message in app.session.getFlashes() %}
+                    <div class="{{ key }}">
+                    {{ message|trans({}, 'FOSUserBundle') }}
+                    </div>
+                {% endfor %}
+
                 {% block content %}
-                {% block fos_user_content %}
-                {% endblock fos_user_content %}
+                    {% block fos_user_content %}{% endblock fos_user_content %}
                 {% endblock %}
             </div>
         </div>
