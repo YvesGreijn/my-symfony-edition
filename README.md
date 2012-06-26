@@ -1,4 +1,4 @@
-Symfony Standard Edition
+My Symfony Edition
 ========================
 
 Welcome to the Symfony Standard Edition - a fully-functional Symfony2
@@ -32,8 +32,8 @@ But if you still want to use Git, you are on your own.
 
 Run the following commands:
 
-    git clone http://github.com/symfony/symfony-standard.git
-    cd symfony-standard
+    git clone http://github.com/maxailloud/my-symfony-edition.git
+    cd my-symfony-edition
     rm -rf .git
 
 2) Installation
@@ -77,7 +77,7 @@ Symfony Application online" link of the ``config.php`` page.
 
 To see a real-live Symfony page in action, access the following page:
 
-    web/app_dev.php/demo/hello/Fabien
+    web/app_dev.php
 
 3) Learn about Symfony!
 -----------------------
@@ -106,17 +106,6 @@ The distribution is configured with the following defaults:
 * Annotations for everything are enabled.
 * AdminGeneratorgneratorBundle is configured
 * AdminGeneratorgneratorBundle is configured
-
-A default bundle, ``AcmeDemoBundle``, shows you Symfony2 in action. After
-playing with it, you can remove it by following these steps:
-
-* delete the ``src/Acme`` directory;
-* remove the routing entries referencing AcmeBundle in ``app/config/routing_dev.yml``;
-* remove the AcmeBundle from the registered bundles in ``app/AppKernel.php``;
-* remove the ``web/bundles/acmedemo`` directory;
-* remove the inclusion of the security configuration in
-  ``app/config/config.yml`` (remove the ``- { resource: security.yml }`` line)
-  or tweak the default configuration to fit your needs.
 
 What's inside?
 ---------------

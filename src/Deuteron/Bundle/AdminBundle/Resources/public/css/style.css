@@ -7,6 +7,18 @@ body {
     width: 24%;
 }
 
+aside {
+    text-align: center;
+}
+
+aside nav {
+    text-align: left;
+}
+
+#app_version {
+    color:#BBB;
+}
+
 /**** Login Form ****/
 #login_container {
     min-height: 20px;
