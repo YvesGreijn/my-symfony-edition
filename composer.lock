@@ -1,5 +1,5 @@
 {
-    "hash": "8a16ce6ac38f721986d425d5a95d9c77",
+    "hash": "dbe8009660d0c0b6de7a38822abf939c",
     "packages": [
         {
             "package": "doctrine/common",
@@ -15,7 +15,7 @@
         {
             "package": "friendsofsymfony/user-bundle",
             "version": "dev-master",
-            "source-reference": "6200cecef5e1ae9c473d00220800b5cc2d09c7b1"
+            "source-reference": "0363e2389055acf3619b28b5a6c401a4aa5b838b"
         },
         {
             "package": "jms/aop-bundle",
@@ -85,7 +85,7 @@
         {
             "package": "propel/propel-bundle",
             "version": "1.1.x-dev",
-            "source-reference": "554132cffd4fe718e70091259a8f6d0edfe01f59"
+            "source-reference": "1.1.1"
         },
         {
             "package": "propel/propel1",
@@ -94,12 +94,12 @@
         {
             "package": "sensio/distribution-bundle",
             "version": "dev-master",
-            "source-reference": "a360ad61fe34206a7295c1ef00b5455b2b2e1071"
+            "source-reference": "f3515e702f9cae8e727d982557dca8de82dd12c5"
         },
         {
             "package": "sensio/framework-extra-bundle",
             "version": "dev-master",
-            "source-reference": "62e41b85947034b0f1dfe31bb8e76920e1488571"
+            "source-reference": "ba7c2d872d609d972d43254bb9d1fdead25f7758"
         },
         {
             "package": "sensio/generator-bundle",
@@ -141,7 +141,7 @@
         {
             "package": "symfony/symfony",
             "version": "dev-master",
-            "source-reference": "03c8d4d2b05dc8e984e2e29b5f200e7d50ecd412"
+            "source-reference": "d0e154725c85a3ec5bc6760a59cc2769b8a17ae5"
         },
         {
             "package": "twig/extensions",
@@ -157,7 +157,7 @@
         {
             "package": "twig/twig",
             "version": "dev-master",
-            "source-reference": "4679ad51c5390648b7ea4c8f0ecd2c0c344145ba"
+            "source-reference": "48a04538659e85e4c89da3787587e1988db9c5e9"
         },
         {
             "package": "willdurand/propel-typehintable-behavior",
