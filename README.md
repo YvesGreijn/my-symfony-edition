@@ -148,3 +148,11 @@ This Symfony Edition comes pre-configured with the following bundles:
 * **AcmeDemoBundle** (in dev/test env) - A demo bundle with some example code
 
 Enjoy!
+
+Some functionnalities:
+---------------
+
+Adding links in the Admin with the event dispatcher as explain in the [KnpMenuBundle github](https://github.com/KnpLabs/KnpMenuBundle/blob/master/Resources/doc/events.md).
+
+See the UserBundle for how to implement that.
+
