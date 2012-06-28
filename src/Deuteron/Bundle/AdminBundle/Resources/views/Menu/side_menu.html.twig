@@ -1,0 +1,14 @@
+{% extends 'knp_menu.html.twig' %}
+
+{# because macro from knp_menu.html.twig is not imported I got to redeclare it #}
+{% macro attributes(attributes) %}
+{% for name, value in attributes %}
+    {%- if value is not none and value is not sameas(false) -%}
+        {{- ' %s="%s"'|format(name, value is sameas(true) ? name|e : value|e)|raw -}}
+    {%- endif -%}
+{%- endfor -%}
+{% endmacro %}
+
+{% block linkElement %}<a href="{{ item.uri }}"{{ _self.attributes(item.linkAttributes) }}>{{ block('icondedLabel') }}</a>{% endblock %}
+
+{% block icondedLabel %}{% if options.allow_safe_labels and item.getExtra('safe_label', false) %}{{ item.label|raw }}{% else %}<i class="{{ item.getExtra('icon_class', '') }}"></i>{{ item.label }}{% endif %}{% endblock %}

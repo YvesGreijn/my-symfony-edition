@@ -39,10 +39,10 @@ class MenuBuilder
         $menu = $this->factory->createItem('root', array('childrenAttributes' => array('class' => 'nav nav-list')));
 
         $menu->addChild('Deuteron', array('attributes' => array('class' => 'nav-header')));
-        $menu->addChild('<i class="icon-white icon-home"></i> Overview', array('attributes' => array('class' => 'active'), 'route' => 'admin_dashboard', 'extras' => array('safe_label' => true)));
-        $menu->addChild('<i class="icon-user"></i> Users', array('route' => 'user_list', 'extras' => array('safe_label' => true)));
+        $menu->addChild('Overview', array('route' => 'admin_dashboard', 'extras' => array('safe_label' => true, 'icon_class' => 'fam_house')));
+        $menu->addChild('Users', array('route' => 'user_list', 'extras' => array('safe_label' => true, 'icon_class' => 'fam_user')));
         $menu->addChild('Your Account', array('attributes' => array('class' => 'nav-header')));
-        $menu->addChild('<i class="icon-user"></i> Profile', array('route' => 'fos_user_profile_show', 'extras' => array('safe_label' => true)));
+        $menu->addChild('Profile', array('route' => 'fos_user_profile_show', 'extras' => array('safe_label' => true, 'icon_class' => 'fam_report_user')));
 
         return $menu;
     }
