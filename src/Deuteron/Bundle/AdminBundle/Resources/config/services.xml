@@ -5,18 +5,19 @@
     xsi:schemaLocation="http://symfony.com/schema/dic/services http://symfony.com/schema/dic/services/services-1.0.xsd">
 
     <parameters>
-        <parameter key="deuteron_admin.menu_builder.class">Deuteron\Bundle\AdminBundle\Menu\MenuBuilder</parameter>
-        <parameter key="deuteron_admin.menu_item.class">Knp\Menu\MenuItem</parameter>
+        <parameter key="deuteron_admin.menu.builder.class">Deuteron\Bundle\AdminBundle\Menu\MenuBuilder</parameter>
+        <parameter key="deuteron_admin.menu.item.class">Knp\Menu\MenuItem</parameter>
     </parameters>
 
     <services>
 
-        <service id="deuteron_admin.menu_builder" class="%deuteron_admin.menu_builder.class%">
+        <service id="deuteron_admin.menu.builder" class="%deuteron_admin.menu.builder.class%">
             <argument type="service" id="knp_menu.factory" />
             <argument type="service" id="security.context" />
+            <argument type="service" id="event_dispatcher" />
         </service>
 
-        <service id="deuteron_admin.menu.main" class="%deuteron_admin.menu_item.class%" factory-service="deuteron_admin.menu_builder" factory-method="createSideMenu" scope="request">
+        <service id="deuteron_admin.menu.side" class="%deuteron_admin.menu.item.class%" factory-service="deuteron_admin.menu.builder" factory-method="createSideMenu" scope="request">
             <argument type="service" id="request" />
             <tag name="knp_menu.menu" alias="side" />
         </service>

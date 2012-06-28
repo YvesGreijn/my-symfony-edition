@@ -1,11 +1,12 @@
 <?php
 namespace Deuteron\Bundle\AdminBundle\Menu;
 
-use Knp\Menu\FactoryInterface,
-    Symfony\Component\HttpFoundation\Request,
-    Symfony\Component\Routing\Router,
-    Symfony\Component\Security\Core\SecurityContext
-;
+use Knp\Menu\FactoryInterface;
+use Symfony\Component\EventDispatcher\EventDispatcher;
+use Symfony\Component\HttpFoundation\Request;
+use Symfony\Component\Routing\Router;
+use Symfony\Component\Security\Core\SecurityContext;
+use Deuteron\Bundle\AdminBundle\Event\ConfigureMenuEvent;
 
 class MenuBuilder
 {
@@ -20,14 +21,22 @@ class MenuBuilder
     private $securityContext;
 
     /**
-    * @param \Knp\Menu\FactoryInterface $factory
-    * @param \Symfony\Component\Security\Core\SecurityContext $securityContext
+    * @var \Symfony\Component\EventDispatcher\EventDispatcher
     */
-    public function __construct(FactoryInterface $factory, SecurityContext $securityContext)
+    private $eventDispatcher;
+
+    /**
+     * @param \Knp\Menu\FactoryInterface $factory
+     * @param \Symfony\Component\Security\Core\SecurityContext $securityContext
+     * @param \Symfony\Component\EventDispatcher\EventDispatcher $eventDispatcher
+     */
+    public function __construct(FactoryInterface $factory, SecurityContext $securityContext, EventDispatcher $eventDispatcher)
     {
         $this->factory = $factory;
 
         $this->securityContext = $securityContext;
+
+        $this->eventDispatcher = $eventDispatcher;
     }
 
     /**
@@ -40,9 +49,8 @@ class MenuBuilder
 
         $menu->addChild('Deuteron', array('attributes' => array('class' => 'nav-header')));
         $menu->addChild('Overview', array('route' => 'admin_dashboard', 'extras' => array('safe_label' => true, 'icon_class' => 'fam_house')));
-        $menu->addChild('Users', array('route' => 'user_list', 'extras' => array('safe_label' => true, 'icon_class' => 'fam_user')));
-        $menu->addChild('Your Account', array('attributes' => array('class' => 'nav-header')));
-        $menu->addChild('Profile', array('route' => 'fos_user_profile_show', 'extras' => array('safe_label' => true, 'icon_class' => 'fam_report_user')));
+
+        $this->eventDispatcher->dispatch(ConfigureMenuEvent::CONFIGURE, new ConfigureMenuEvent($this->factory, $menu));
 
         return $menu;
     }
