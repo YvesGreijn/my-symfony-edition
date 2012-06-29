@@ -21,6 +21,7 @@ class AppKernel extends Kernel
             new Propel\PropelBundle\PropelBundle(),
             new Knp\Bundle\MenuBundle\KnpMenuBundle(),
             new Knp\Bundle\PaginatorBundle\KnpPaginatorBundle(),
+            new Zenstruck\Bundle\VersionBundle\ZenstruckVersionBundle(),
             new Deuteron\Bundle\ProjectBundle\DeuteronProjectBundle(),
             new Deuteron\Bundle\UserBundle\DeuteronUserBundle(),
             new Deuteron\Bundle\PageBundle\DeuteronPageBundle(),

@@ -104,8 +104,7 @@ The distribution is configured with the following defaults:
 * Propel is configured;
 * Swiftmailer is configured;
 * Annotations for everything are enabled.
-* AdminGeneratorgneratorBundle is configured
-* AdminGeneratorgneratorBundle is configured
+* An functionnal backend
 
 What's inside?
 ---------------
@@ -133,10 +132,8 @@ This Symfony Edition comes pre-configured with the following bundles:
   ([documentation](https://github.com/propelorm/PropelBundle/blob/1.1/Resources/doc/index.markdown))
 * **FOSUserBundle** - Make it quick and easy to store users in a database
   ([documentation](https://github.com/FriendsOfSymfony/FOSUserBundle/blob/master/Resources/doc/index.md))
-* **AdminGeneratorgneratorBundle** - Adds a powerful admin generator
-  ([documentation](http://symfony2admingenerator.org/))
-* **AdmingeneratorUserBundle** - Allow you to associate to the FOSUserBundle a base layout configured throw a config in the config.yml
-  ([documentation](https://github.com/cedriclombardot/AdmingeneratorUserBundle))
+* **ZenstruckVersionBundle** - Keep track of your Symfony2 application's version
+  ([documentation](https://github.com/kbond/ZenstruckVersionBundle))
 * **KnpMenuBundle** - Adds easy-to-implement and feature-rich menus in your Symfony2 application
   ([documentation](https://github.com/KnpLabs/KnpMenuBundle/blob/master/Resources/doc/index.md))
 * **WebProfilerBundle** (in dev/test env) - Adds profiling functionality and
@@ -145,7 +142,6 @@ This Symfony Edition comes pre-configured with the following bundles:
   and working with Symfony distributions
 * **SensioGeneratorBundle** (in dev/test env) - Adds code generation capabilities
   ([documentation](http://symfony.com/doc/current/bundles/SensioGeneratorBundle/index.html))
-* **AcmeDemoBundle** (in dev/test env) - A demo bundle with some example code
 
 Enjoy!
 

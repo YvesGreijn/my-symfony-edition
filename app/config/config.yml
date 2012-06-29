@@ -70,3 +70,6 @@ knp_menu:
 knp_paginator:
     template:
         pagination: DeuteronProjectBundle:Pagination:sliding.html.twig
+
+zenstruck_version:
+    enabled: true

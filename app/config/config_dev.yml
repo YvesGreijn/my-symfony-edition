@@ -24,3 +24,6 @@ assetic:
 
 #swiftmailer:
 #    delivery_address: me@example.com
+
+zenstruck_version:
+    toolbar: true

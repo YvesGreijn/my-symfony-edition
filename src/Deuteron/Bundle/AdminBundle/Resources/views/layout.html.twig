@@ -7,7 +7,7 @@
                 <nav class="well" style="padding: 8px 0;">
                     {{ knp_menu_render('side', {'template': 'DeuteronAdminBundle:Menu:side_menu.html.twig', 'currentClass': 'active'}) }}
                 </nav>
-                <span id="app_version">&copy; {{ app_name }} - version 0.1</span>
+                <span id="app_version">&copy; {{ app_name }} - version {{ version() }}</span>
             </aside>
 
             <div class="span9">
