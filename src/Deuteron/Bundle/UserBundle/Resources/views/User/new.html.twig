@@ -7,27 +7,26 @@
   <h1>Ajout d'un utlisateur</h1>
 </div>
 
-<form id="form" action="{{ path('user_new') }}" method="post" {{ form_enctype(form) }}>
+<form action="{{ path('user_new') }}" method="post" {{ form_enctype(form) }}>
     {{ form_errors(form) }}
 
     {{ form_row(form.username) }}
     {{ form_row(form.email) }}
     {{ form_row(form.password) }}
 
-    <div class="clearfix">
-        <div class="input">
-            <ul class="inputs-list">
-                <li>
-                    {{ form_widget(form.super_admin) }}
-                    {{ form_label(form.super_admin) }}
-                </li>
-            </ul>
+    <div class="control-group">
+        <div class="controls">
+            <label class="checkbox">
+                {{ form_widget(form.super_admin) }}
+                {{ form_label(form.super_admin) }}
+            </label>
         </div>
     </div>
+
     {{ form_rest(form) }}
 
-    <div class="actions">
-        <input type="submit" name="valid" class="btn primary"  id="button1" value="Ajouter"/>
+    <div>
+        <button type="submit" name="valid" class="btn btn-primary">Ajouter</button>
         <a href="{{ path('user_list') }}" class="btn" title="Annuler">Annuler</a>
     </div>
 </form>

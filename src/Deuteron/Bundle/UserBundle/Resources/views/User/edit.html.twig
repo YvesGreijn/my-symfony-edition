@@ -7,7 +7,7 @@
     <h1>Modification d'un utlisateur</h1>
 </div>
 
-<form id="form" action="{{ path('user_edit', { 'id': user.id}) }}" method="post" {{ form_enctype(form) }}>
+<form action="{{ path('user_edit', { 'id': user.id}) }}" method="post" {{ form_enctype(form) }}>
 
     {{ form_errors(form) }}
 
@@ -15,8 +15,8 @@
 
     {{ form_rest(form) }}
 
-    <div class="actions">
-        <input type="submit" name="valid" class="btn primary" value="Modifer"/>
+    <div>
+        <button type="submit" name="valid" class="btn btn-primary">Modifier</button>
         <a href="{{ path('user_list') }}" class="btn" title="Annuler">Annuler</a>
     </div>
 </form>
