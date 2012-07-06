@@ -1,12 +1,6 @@
 {
-    "hash": "84d31f39110e7631dfde7bc99deae458",
+    "hash": "583a4840be9b10e3bf711b910b1b5f1d",
     "packages": [
-        {
-            "package": "Zenstruck/Bundle/VersionBundle",
-            "version": "master",
-            "source-reference": "master",
-            "commit-date": "1340982805"
-        },
         {
             "package": "doctrine/common",
             "version": "dev-master",
@@ -16,14 +10,14 @@
         {
             "package": "doctrine/common",
             "version": "dev-master",
-            "source-reference": "e9f9a27a5bf3b8d95077de475a4dff495deaf39c",
-            "commit-date": "1340963135"
+            "source-reference": "d2f8a36b8696b446bf25cfe2b0b3aaf03e0835e6",
+            "commit-date": "1341088911"
         },
         {
             "package": "friendsofsymfony/user-bundle",
             "version": "dev-master",
-            "source-reference": "0363e2389055acf3619b28b5a6c401a4aa5b838b",
-            "commit-date": "1340798867"
+            "source-reference": "dbcfbad4a5d7b81ec8cd2a79e58b5a80e19b4ab5",
+            "commit-date": "1341527395"
         },
         {
             "package": "jms/aop-bundle",
@@ -66,8 +60,8 @@
         {
             "package": "knplabs/knp-menu-bundle",
             "version": "dev-master",
-            "source-reference": "d29a1f3037ba3ddeb322e6cb146db5f18d64cae9",
-            "commit-date": "1340146792"
+            "source-reference": "ba1ff625e4b34131106e12ee475eb6397eb5a758",
+            "commit-date": "1341324163"
         },
         {
             "package": "knplabs/knp-paginator-bundle",
@@ -98,8 +92,8 @@
         {
             "package": "propel/propel-bundle",
             "version": "1.1.x-dev",
-            "source-reference": "1.1.1",
-            "commit-date": "1340492947"
+            "source-reference": "62eb1ec793065a858e311152e7737a453fb6f3c8",
+            "commit-date": "1341257524"
         },
         {
             "package": "propel/propel1",
@@ -108,14 +102,14 @@
         {
             "package": "sensio/distribution-bundle",
             "version": "dev-master",
-            "source-reference": "f3515e702f9cae8e727d982557dca8de82dd12c5",
-            "commit-date": "1340790396"
+            "source-reference": "a3f939728f421b897472163b7e041d65d48c3b01",
+            "commit-date": "1341409780"
         },
         {
             "package": "sensio/framework-extra-bundle",
             "version": "dev-master",
-            "source-reference": "b9f630e35059f661a59ec4e0f5505b067fed4e55",
-            "commit-date": "1340889912"
+            "source-reference": "4f54e5d5fb3b54fb107892684018f3704934c48d",
+            "commit-date": "1341126219"
         },
         {
             "package": "sensio/generator-bundle",
@@ -125,7 +119,7 @@
         },
         {
             "package": "swiftmailer/swiftmailer",
-            "version": "v4.1.8"
+            "version": "v4.2.0"
         },
         {
             "package": "symfony/assetic-bundle",
@@ -136,14 +130,14 @@
         {
             "package": "symfony/monolog-bundle",
             "version": "dev-master",
-            "source-reference": "660a1aeaf93e8ffdc34c27b3a82dc47195ad1d8d",
-            "commit-date": "1340609637"
+            "source-reference": "7fe7f711bb04b86ad7f45a9e11a7f8cbaf9bc1a5",
+            "commit-date": "1341078487"
         },
         {
             "package": "symfony/swiftmailer-bundle",
             "version": "dev-master",
-            "source-reference": "v2.1.0-BETA1",
-            "commit-date": "1340144744"
+            "source-reference": "e1d413ce27fd1696bdc82ad9525f1b874664530e",
+            "commit-date": "1341509614"
         },
         {
             "package": "symfony/symfony",
@@ -154,8 +148,8 @@
         {
             "package": "symfony/symfony",
             "version": "dev-master",
-            "source-reference": "8ebe624b82dc9f91231ec2a4361468579495cdd8",
-            "commit-date": "1340951895"
+            "source-reference": "57581193d3c9238d710fb74670aa190cee85dfba",
+            "commit-date": "1341568831"
         },
         {
             "package": "twig/extensions",
@@ -166,27 +160,33 @@
         {
             "package": "twig/twig",
             "version": "dev-master",
-            "alias-pretty-version": "1.8.x-dev",
-            "alias-version": "1.8.9999999.9999999-dev"
+            "alias-pretty-version": "1.9.x-dev",
+            "alias-version": "1.9.9999999.9999999-dev"
         },
         {
             "package": "twig/twig",
             "version": "dev-master",
-            "source-reference": "73da773aaad0f97f2e967ec8241b8adf7b1e03d2",
-            "commit-date": "1340890758"
+            "source-reference": "26eb0a2653eade50dffdd31b11ca454232dea8cf",
+            "commit-date": "1341423205"
         },
         {
             "package": "willdurand/propel-typehintable-behavior",
             "version": "dev-master",
             "source-reference": "1.0.0",
             "commit-date": "1335134192"
+        },
+        {
+            "package": "zenstruck/version-bundle",
+            "version": "dev-master",
+            "source-reference": "e07fa1f004ef1acbf53ad080520770d5dd1b2633",
+            "commit-date": "1340986109"
         }
     ],
     "packages-dev": null,
     "aliases": [
 
     ],
-    "minimum-stability": "dev",
+    "minimum-stability": "stable",
     "stability-flags": {
         "twig/extensions": 20,
         "symfony/assetic-bundle": 20,
@@ -199,6 +199,6 @@
         "knplabs/knp-paginator-bundle": 20,
         "knplabs/knp-menu-bundle": 20,
         "willdurand/propel-typehintable-behavior": 20,
-        "zenstruck/bundle/versionbundle": 20
+        "zenstruck/version-bundle": 20
     }
 }

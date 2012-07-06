@@ -2,23 +2,8 @@
     "name": "My Symfony Edition",
     "description": "A Symfony Edition that fits all my needs",
     "autoload": {
-        "psr-0": { "": "src/" },
-        "classmap": ["vendor/Zenstruck/Bundle/VersionBundle"]
+        "psr-0": { "": "src/" }
     },
-    "repositories": [
-        {
-            "type": "package",
-            "package": {
-                "name": "Zenstruck/Bundle/VersionBundle",
-                "version": "master",
-                "source": {
-                    "url": "git://github.com/kbond/ZenstruckVersionBundle.git",
-                    "type": "git",
-                    "reference": "master"
-                }
-            }
-        }
-    ],
     "require": {
         "php":                                              ">=5.3.3",
         "symfony/symfony":                                  "2.1.*",
@@ -39,7 +24,7 @@
         "knplabs/knp-menu-bundle":                          "dev-master",
         "propel/propel-bundle":                             "1.1.*",
         "willdurand/propel-typehintable-behavior":          "dev-master",
-        "Zenstruck/Bundle/VersionBundle":                   "dev-master"
+        "zenstruck/version-bundle":                         "dev-master"
     },
     "scripts": {
         "post-install-cmd": [
