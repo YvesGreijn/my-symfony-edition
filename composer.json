@@ -1,9 +1,6 @@
 {
     "name": "My Symfony Edition",
     "description": "A Symfony Edition that fits all my needs",
-    "autoload": {
-        "psr-0": { "": "src/" }
-    },
     "minimum-stability": "dev",
     "require": {
         "php":                                              ">=5.3.3",
@@ -51,5 +48,8 @@
     "extra": {
         "symfony-app-dir": "app",
         "symfony-web-dir": "web"
+    },
+    "autoload": {
+        "psr-0": { "": "src/" }
     }
 }
