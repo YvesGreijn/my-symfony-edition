@@ -4,6 +4,7 @@
     "autoload": {
         "psr-0": { "": "src/" }
     },
+    "minimum-stability": "dev",
     "require": {
         "php":                                              ">=5.3.3",
         "symfony/symfony":                                  "2.1.*",
@@ -25,6 +26,10 @@
         "propel/propel-bundle":                             "1.1.*",
         "willdurand/propel-typehintable-behavior":          "dev-master",
         "zenstruck/version-bundle":                         "dev-master"
+    },
+    "require-dev": {
+        "mageekguy/atoum":                                  "dev-master",
+        "behat/symfony2-extension":                         "*"
     },
     "scripts": {
         "post-install-cmd": [

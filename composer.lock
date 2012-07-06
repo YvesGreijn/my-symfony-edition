@@ -1,5 +1,5 @@
 {
-    "hash": "583a4840be9b10e3bf711b910b1b5f1d",
+    "hash": "737ccf0979f6764b3775f2e5cf8f2ca2",
     "packages": [
         {
             "package": "doctrine/common",
@@ -119,7 +119,15 @@
         },
         {
             "package": "swiftmailer/swiftmailer",
-            "version": "v4.2.0"
+            "version": "dev-master",
+            "alias-pretty-version": "4.2.x-dev",
+            "alias-version": "4.2.9999999.9999999-dev"
+        },
+        {
+            "package": "swiftmailer/swiftmailer",
+            "version": "dev-master",
+            "source-reference": "1829c40b70f3fc45a3696349bfcb99fb755aa926",
+            "commit-date": "1341418063"
         },
         {
             "package": "symfony/assetic-bundle",
@@ -148,8 +156,8 @@
         {
             "package": "symfony/symfony",
             "version": "dev-master",
-            "source-reference": "57581193d3c9238d710fb74670aa190cee85dfba",
-            "commit-date": "1341568831"
+            "source-reference": "1cb9a74057c8cbd5ffc26ba6bf042e29187244fe",
+            "commit-date": "1341583159"
         },
         {
             "package": "twig/extensions",
@@ -182,11 +190,32 @@
             "commit-date": "1340986109"
         }
     ],
-    "packages-dev": null,
+    "packages-dev": [
+        {
+            "package": "behat/behat",
+            "version": "v2.4.2"
+        },
+        {
+            "package": "behat/gherkin",
+            "version": "v2.2.2"
+        },
+        {
+            "package": "behat/symfony2-extension",
+            "version": "dev-master",
+            "source-reference": "v1.0.0",
+            "commit-date": "1341475375"
+        },
+        {
+            "package": "mageekguy/atoum",
+            "version": "dev-master",
+            "source-reference": "dc783f4752925739e771956a0425849d5768e053",
+            "commit-date": "1341499977"
+        }
+    ],
     "aliases": [
 
     ],
-    "minimum-stability": "stable",
+    "minimum-stability": "dev",
     "stability-flags": {
         "twig/extensions": 20,
         "symfony/assetic-bundle": 20,
@@ -199,6 +228,7 @@
         "knplabs/knp-paginator-bundle": 20,
         "knplabs/knp-menu-bundle": 20,
         "willdurand/propel-typehintable-behavior": 20,
-        "zenstruck/version-bundle": 20
+        "zenstruck/version-bundle": 20,
+        "mageekguy/atoum": 20
     }
 }
