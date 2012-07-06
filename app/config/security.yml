@@ -11,6 +11,9 @@ jms_security_extra:
     expressions: false
 
 security:
+    acl:
+        provider: propel.security.acl.provider
+
     access_denied_url: unauthorized
 
     providers:

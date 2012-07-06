@@ -10,6 +10,8 @@ class ScriptHandler extends \Sensio\Bundle\DistributionBundle\Composer\ScriptHan
     {
         $options = self::getOptions($event);
 
+        static::executeCommand($event, $options['symfony-app-dir'], 'propel:init-acl --force');
+
         static::executeCommand($event, $options['symfony-app-dir'], 'propel:build --insert-sql');
     }
 
