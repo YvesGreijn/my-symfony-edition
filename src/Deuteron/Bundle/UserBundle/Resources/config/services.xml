@@ -12,6 +12,7 @@
 
         <service id="deuteron_admin.menu.admin.listener" class="%deuteron_user.menu.admin.configure_listener.class%">
             <tag name="kernel.event_listener" event="deuteron_admin.menu.side.configure" method="onMenuConfigure" />
+            <argument type="service" id="security.context" />
         </service>
 
     </services>

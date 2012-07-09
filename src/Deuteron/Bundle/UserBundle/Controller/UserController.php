@@ -59,11 +59,11 @@ class UserController extends Controller
                     $manipulator = $this->get('fos_user.util.user_manipulator');
                     $newUser = $manipulator->create($formData['username'], $formData['password'], $formData['email'], true, $formData['super_admin']);
 
-                    $this->get('session')->setFlash('user_add_success', 'Le compte utilisateur a été crée avec succès.');
+                    $this->get('session')->setFlash('success', 'Le compte utilisateur a été crée avec succès.');
                 }
                 catch(\Exception $exception)
                 {
-                    $this->get('session')->setFlash('user_add_error', 'La création du compte utilisateur a échoué.');
+                    $this->get('session')->setFlash('error', 'La création du compte utilisateur a échoué.');
                 }
 
                 return $this->redirect($this->generateUrl('user_list'));
@@ -93,11 +93,11 @@ class UserController extends Controller
                 try
                 {
                     $user->save();
-                    $this->get('session')->setFlash('user_edit_success', 'Le compte utilisateur a été modifié avec succès.');
+                    $this->get('session')->setFlash('success', 'Le compte utilisateur a été modifié avec succès.');
                 }
                 catch(\Exception $exception)
                 {
-                    $this->get('session')->setFlash('user_edit_error', 'La modification du compte utilisateur a échoué.');
+                    $this->get('session')->setFlash('error', 'La modification du compte utilisateur a échoué.');
                 }
 
                 return $this->redirect($this->generateUrl('user_list'));
@@ -120,11 +120,11 @@ class UserController extends Controller
         {
             $user->delete();
 
-            $this->get('session')->setFlash('user_delete_success', 'Le compte utilisateur a été supprimé avec succès.');
+            $this->get('session')->setFlash('success', 'Le compte utilisateur a été supprimé avec succès.');
         }
         catch(\Exception $exception)
         {
-            $this->get('session')->setFlash('user_delete_error', 'La suppression du compte utilisateur a échoué.');
+            $this->get('session')->setFlash('error', 'La suppression du compte utilisateur a échoué.');
         }
 
         return $this->redirect($this->generateUrl('user_list'));

@@ -48,7 +48,10 @@ class MenuBuilder
         $menu = $this->factory->createItem('root', array('childrenAttributes' => array('class' => 'nav nav-list')));
 
         $menu->addChild('Deuteron', array('attributes' => array('class' => 'nav-header')));
-        $menu->addChild('Overview', array('route' => 'admin_dashboard', 'extras' => array('safe_label' => true, 'icon_class' => 'fam_house')));
+        if(true === $this->securityContext->isGranted('ROLE_ADMIN'))
+        {
+            $menu->addChild('Overview', array('route' => 'admin_dashboard', 'extras' => array('safe_label' => true, 'icon_class' => 'fam_house')));
+        }
 
         $this->eventDispatcher->dispatch(ConfigureMenuEvent::CONFIGURE, new ConfigureMenuEvent($this->factory, $menu));
 
