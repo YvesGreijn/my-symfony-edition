@@ -39,10 +39,5 @@ class InitDevCommand extends ContainerAwareCommand
           )),
           $output
         );
-
-        // Création d'un utilisateur
-        $fosUserCreateCommand = $this->getApplication()->get('fos:user:create');
-        $fosUserCreateCommand->run($input,$output);
-
     }
 }

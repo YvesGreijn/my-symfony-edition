@@ -1,29 +1,58 @@
-{% extends 'DeuteronAdminBundle::base.html.twig' %}
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width">
 
-{% block globalcontent %}
-        <div class="row-fluid">
+        <title>{% block title %}{{ app_name }} - Administration{% endblock %}</title>
 
-            <aside class="span3">
-                <nav class="well" style="padding: 8px 0;">
-                    {{ knp_menu_render('side', {'template': 'DeuteronAdminBundle:Menu:side_menu.html.twig', 'currentClass': 'active'}) }}
-                </nav>
-                <span id="app_version">&copy; {{ app_name }} - version {{ version() }}</span>
-            </aside>
+        <meta name="author" content="Maxime AILLOUD">
+        <meta name="description" content="Symfony Edition by maxime AILLOUD">
 
-            <div class="span9">
-                {% for type, flashMessages in app.session.flashbag.all() %}
-                    {% for flashMessage in flashMessages %}
-                        <div class="alert alert-{{ type }}">
-                            <button class="close" data-dismiss="alert">×</button>
-                            {{ flashMessage|trans({}, 'FOSUserBundle') }}
-                        </div>
-                    {% endfor %}
-                {% endfor %}
+        <link rel="stylesheet" href="{{ asset('bundles/deuteronproject/css/bootstrap.min.css') }}" />
+        <link rel="stylesheet" href="{{ asset('bundles/deuteronproject/css/bootstrap-responsive.min.css') }}" />
+        <link rel="stylesheet" href="{{ asset('bundles/deuteronproject/css/famstrap.css') }}" />
+        <link rel="stylesheet" href="{{ asset('bundles/deuteronadmin/css/style.css') }}" />
+        {% block stylesheets %}{% endblock %}
 
-                {% block content %}
-                    {% block fos_user_content %}{% endblock fos_user_content %}
-                {% endblock %}
-            </div>
-        </div>
-{% endblock%}
-        
+        <!-- Le fav and touch icons -->
+        <link rel="shortcut icon" href="{{ asset('favicon.ico') }}" />
+    </head>
+
+    <body class="container">
+
+        <header id="mainMenu" class="navbar">
+            <nav class="navbar-inner">
+                <div class="container">
+                    <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </a>
+
+                    <a class="brand" href="{{ path('index') }}" title="Retour à l'accueil">{{ app_name }}</a>
+
+                    <div class="nav-collapse">
+                        <ul class="nav pull-right">
+                        {% if is_granted('IS_AUTHENTICATED_FULLY') %}
+                            <li><a href="{{ path('fos_user_profile_show') }}" title="Voir son profil">{{ app.user.username }}</a></li>
+                            <li><a href="{{ path('fos_user_security_logout') }}">{{ 'layout.logout'|trans({}, 'FOSUserBundle') }}</a></li>
+                        {% else %}
+                            <li><a href="{{ path('fos_user_security_login') }}" title="Se connecter">Connexion</a></li>
+                        {% endif %}
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </header>
+
+        {% block globalcontent %}
+            {% block fos_user_content %}{% endblock fos_user_content %}
+        {% endblock %}
+
+        <script src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
+        <script src="{{ asset('bundles/deuteronproject/js/bootstrap.min.js') }}"></script>
+        {% block javascripts %}{% endblock %}
+
+    </body>
+</html>

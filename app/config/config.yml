@@ -39,7 +39,6 @@ assetic:
 # Swiftmailer Configuration
 swiftmailer:
     transport: %mailer_transport%
-    host:      %mailer_host%
     username:  %mailer_user%
     password:  %mailer_password%
     spool:     { type: memory }
@@ -61,6 +60,8 @@ fos_user:
     firewall_name:      main
     user_class:         FOS\UserBundle\Propel\UserProxy
     propel_user_class:  FOS\UserBundle\Propel\User
+    from_email:
+        address:        %mailer_from_email%
 
 knp_menu:
     twig: true

@@ -11,6 +11,7 @@ parameters:
     mailer_host:       localhost
     mailer_user:       ~
     mailer_password:   ~
+    mailer_from_email: webmaster@example.com
 
     locale:            fr
     secret:            ThisTokenIsNotSoSecretChangeIt
