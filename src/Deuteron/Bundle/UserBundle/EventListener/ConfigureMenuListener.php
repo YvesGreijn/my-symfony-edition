@@ -26,6 +26,8 @@ class ConfigureMenuListener
     {
         $menu = $event->getMenu();
 
+        $menu->addChild('Utilisateurs', array('attributes' => array('class' => 'nav-header')));
+
         if(true === $this->securityContext->isGranted('ROLE_SUPER_ADMIN'))
         {
             $menu->addChild('Users', array('route' => 'user_list', 'extras' => array('safe_label' => true, 'icon_class' => 'fam_user')));
