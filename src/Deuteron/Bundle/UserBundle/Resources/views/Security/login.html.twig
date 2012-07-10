@@ -11,7 +11,7 @@
             <h1>{{ 'security.login.submit'|trans({}, 'FOSUserBundle') }}</h1>
         </div>
         {% if error %}
-            <div>{{ error }}</div>
+            <div class="alert alert-error">{{ error|trans({}, 'FOSUserBundle') }}</div>
         {% endif %}
 
         <form action="{{ path('fos_user_security_check') }}" method="post" class="form-horizontal">

@@ -22,7 +22,7 @@ aside nav {
 /**** Login Form ****/
 #login_container {
     min-height: 20px;
-    padding: 0px 19px 0px 19px;
+    padding: 0px 19px 10px 19px;
     margin-bottom: 20px;
     background-color: whiteSmoke;
     border: 1px solid rgba(0, 0, 0, 0.05);
