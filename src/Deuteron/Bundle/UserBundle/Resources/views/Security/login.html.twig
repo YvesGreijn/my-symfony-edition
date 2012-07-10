@@ -1,7 +1,7 @@
 {% extends "FOSUserBundle::base.html.twig" %}
 
 {% block title %}
-Connexion
+{{ app_name }} - Connexion
 {% endblock %}
 
 {% block fos_user_content %}
@@ -42,10 +42,12 @@ Connexion
                     </div>
                 </div>
                 <div class="form-actions">
-                    <button type="submit" class="btn" name="login"><i class="fam_lock_open"></i>{{ 'security.login.submit'|trans({}, 'FOSUserBundle') }}</button>
+                    <button type="submit" class="btn btn-primary" name="login"><i class="fam_lock_open"></i>{{ 'security.login.submit'|trans({}, 'FOSUserBundle') }}</button>
                 </div>
             </fieldset>
         </form>
+
+        <a href="{{ path('fos_user_resetting_request') }}" title="Mot de passe perdu ?">Mot de passe perdu ?</a>
     </div>
 </section>
 {% endblock %}

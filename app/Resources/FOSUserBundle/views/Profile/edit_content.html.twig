@@ -1,9 +1,1 @@
-<h1>Edition du profil</h1>
-
-<form action="{{ path('fos_user_profile_edit') }}" method="post" {{ form_enctype(form) }}>
-    {{ form_widget(form) }}
-    <div>
-        <button class="btn btn-primary" type="submit">{{ 'profile.edit.submit'|trans({}, 'FOSUserBundle') }}</button>
-        <a class="btn" href="{{ path('fos_user_profile_show') }}">Annuler</a>
-    </div>
-</form>
+{% extends 'DeuteronUserBundle:Profile:edit_content.html.twig' %}

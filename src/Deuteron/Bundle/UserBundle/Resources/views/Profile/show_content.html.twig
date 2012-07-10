@@ -1,0 +1,6 @@
+<div class="fos_user_user_show">
+    <p>{{ 'profile.show.username'|trans({}, 'FOSUserBundle') }}: {{ user.username }}</p>
+    <p>{{ 'profile.show.email'|trans({}, 'FOSUserBundle') }}: {{ user.email }}</p>
+    <a href="{{ path('fos_user_profile_edit') }}" title="Editer son profil" class="user_edit">Editer</a><br />
+    <a href="{{ path('fos_user_change_password') }}" title="Changer son mot de passe" class="user_edit">Changer le mot de passe</a>
+</div>

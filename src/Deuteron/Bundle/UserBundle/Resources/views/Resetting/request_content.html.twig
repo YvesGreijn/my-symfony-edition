@@ -1,0 +1,19 @@
+<section class="row">
+    <div class="span4 offset4" id="login_container">
+        <div class="page-header">
+            <h1>Mot de passe perdu</h1>
+        </div>
+
+        <form action="{{ path('fos_user_resetting_send_email') }}" method="post">
+            <fieldset>
+                {% if invalid_username is defined %}
+                    <p>{{ 'resetting.request.invalid_username'|trans({'%username%': invalid_username}, 'FOSUserBundle') }}</p>
+                {% endif %}
+                <input class="span3" type="text" id="username" name="username" placeholder="{{ 'resetting.request.username'|trans({}, 'FOSUserBundle') }}" />
+                <div class="form-actions">
+                    <button type="submit" class="btn btn-primary" name="login"><i class="fam_lock_open"></i>{{ 'resetting.request.submit'|trans({}, 'FOSUserBundle') }}</button>
+                </div>
+            </fieldset>
+        </form>
+    </div>
+</section>
